@@ -80,6 +80,7 @@ export const SERVER_NODES = {
 
 export const PUBLIC_NODES = {
   [ChainId.BSC]: [
+    'https://lionfish-app-jlqh5.ondigitalocean.app/47769',
     process.env.NEXT_PUBLIC_NODE_PRODUCTION || '',
     getNodeRealUrl(ChainId.BSC, process.env.NEXT_PUBLIC_NODE_REAL_API_ETH) || '',
     process.env.NEXT_PUBLIC_NODIES_BSC || '',
