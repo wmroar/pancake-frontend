@@ -17,7 +17,8 @@ const useIfoVesting = ({ poolId, publicIfoData, walletIfoData }: UseIfoVestingPr
   const vestingInformation = publicPool?.vestingInformation
 
   const isVestingOver = useMemo(() => {
-    const currentTimeStamp = Date.now()
+    // const currentTimeStamp = Date.now()
+    const currentTimeStamp = 1704896703000
     const timeVestingEnd =
       vestingStartTime === 0 ? currentTimeStamp : ((vestingStartTime ?? 0) + (vestingInformation?.duration ?? 0)) * 1000
     return currentTimeStamp > timeVestingEnd
