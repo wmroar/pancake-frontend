@@ -33,7 +33,7 @@ const IfoProgressStepper: React.FC<React.PropsWithChildren<IfoProgressStepperPro
 
   useEffect(() => {
     // const currentTimeStamp = getNow();
-    const currentTimeStamp = 1704896703000;
+    const currentTimeStamp = 1705248000000;
     const timeSalesEnded = vestingStartTime * 1000;
     const timeCliff = vestingStartTime === 0 ? currentTimeStamp : (vestingStartTime + cliff) * 1000;
     const timeVestingEnd = vestingStartTime === 0 ? currentTimeStamp : (vestingStartTime + duration) * 1000;

@@ -68,7 +68,7 @@ const Info: React.FC<React.PropsWithChildren<InfoProps>> = ({
 
   const { cliff } = publicIfoData[poolId]?.vestingInformation || {}
   // const currentTimeStamp = Date.now()
-  const currentTimeStamp = 1704896703000
+  const currentTimeStamp = 1705248000000
   const timeCliff = vestingStartTime === 0 ? currentTimeStamp : (vestingStartTime + (cliff ?? 0)) * 1000
   const timeVestingEnd = (vestingStartTime + vestingInformationDuration) * 1000
   const isVestingOver = currentTimeStamp > timeVestingEnd
