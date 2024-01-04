@@ -52,7 +52,7 @@ const IfoVestingCard: React.FC<React.PropsWithChildren<IfoVestingCardProps>> = (
 
   const getNow = useCallback(() => {
     // return Date.now()
-    return 1705248000000
+    return 1714746301000
   }, [])
 
   const releaseRate = useMemo(() => {
