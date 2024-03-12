@@ -9,7 +9,7 @@ export const vaults: VaultConfig[] = [
     idByManager: 1,
     name: 'TEAHOUSE',
     address: '0xcd52b6DfD1DD964e2211A1AC11dCE735Bcd2cc8B',
-    adapterAddress: '0xcd52b6DfD1DD964e2211A1AC11dCE735Bcd2cc8B',
+    adapterAddress: '0x971000622B0181b0794e77b4207A607ba5Cf86c1',
     currencyA: arbitrumTokens.usdc,
     currencyB: arbitrumTokens.usdce,
     earningToken: arbitrumTokens.cake,
