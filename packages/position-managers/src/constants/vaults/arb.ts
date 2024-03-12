@@ -5,6 +5,25 @@ import { MANAGER } from '../managers'
 
 export const vaults: VaultConfig[] = [
   {
+    id: 2,
+    idByManager: 1,
+    name: 'TEAHOUSE',
+    address: '0xcd52b6DfD1DD964e2211A1AC11dCE735Bcd2cc8B',
+    adapterAddress: '0xcd52b6DfD1DD964e2211A1AC11dCE735Bcd2cc8B',
+    currencyA: arbitrumTokens.usdc,
+    currencyB: arbitrumTokens.usdce,
+    earningToken: arbitrumTokens.cake,
+    feeTier: FeeAmount.LOWEST,
+    strategy: Strategy.ALO,
+    manager: MANAGER.DEFIEDGE,
+    isSingleDepositToken: false,
+    allowDepositToken0: true,
+    allowDepositToken1: true,
+    managerInfoUrl: 'https://teahouse.finance/',
+    strategyInfoUrl: 'https://docs.teahouse.finance/teahouse-finance-1/managed-vaults/about-managed-vaults',
+    learnMoreAboutUrl: 'https://docs.teahouse.finance/teahouse-finance-1',
+  },
+  {
     id: 1,
     idByManager: 1,
     name: 'DEFIEDGE',
