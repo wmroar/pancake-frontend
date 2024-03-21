@@ -22,7 +22,7 @@ import { MMRfqTrade } from '../types'
 
 const SettingsModalWithCustomDismiss = withCustomOnDismiss(SettingsModal)
 
-interface SwapCommitButtonPropsType {
+interface SwapCommitButtonPropsType<SendTransactionReturnType> {
   swapIsUnsupported: boolean
   account: string | undefined
   showWrap: boolean
@@ -30,8 +30,8 @@ interface SwapCommitButtonPropsType {
   onWrap?: () => Promise<void>
   wrapType: WrapType
   approval: ApprovalState
-  approveCallback: () => Promise<`0x${string}` | undefined>
-  revokeCallback: () => Promise<`0x${string}` | undefined>
+  approveCallback: () => Promise<SendTransactionReturnType>
+  revokeCallback: () => Promise<SendTransactionReturnType>
   approvalSubmitted: boolean
   currencies: {
     INPUT?: Currency
@@ -51,7 +51,7 @@ interface SwapCommitButtonPropsType {
   currentAllowance: CurrencyAmount<Currency> | undefined
 }
 
-export function MMSwapCommitButton({
+export function MMSwapCommitButton<SendTransactionReturnType>({
   swapIsUnsupported,
   account,
   showWrap,
@@ -69,7 +69,7 @@ export function MMSwapCommitButton({
   onUserInput,
   isPendingError,
   currentAllowance,
-}: SwapCommitButtonPropsType) {
+}: SwapCommitButtonPropsType<SendTransactionReturnType>) {
   const { chainId } = useActiveChainId()
 
   const [isExpertMode] = useExpertMode()
